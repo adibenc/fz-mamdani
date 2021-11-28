@@ -140,6 +140,11 @@ class FuzzySystem:
 		# add the new rule
 		self._rules.append(new_rule)
 
+	def addRule(self, antecedent_clauses, consequent_clauses):
+		self.add_rule(antecedent_clauses, consequent_clauses)
+
+		return self
+
 	def evaluate_output(self, input_values):
 		'''
 		Executes the fuzzy inference system for a set of inputs

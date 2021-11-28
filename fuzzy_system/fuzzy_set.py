@@ -68,11 +68,19 @@ class FuzzySet:
 		c = t1fs._adjust_domain_val(c)
 
 		if b == a:
-			t1fs._dom = np.round(np.maximum((c-t1fs._domain)/(c-b), 0), t1fs._precision)
+			t1fs._dom = np.round(
+				np.maximum((c-t1fs._domain)/(c-b), 0), t1fs._precision
+			)
 		elif b == c:
-			t1fs._dom = np.round(np.maximum((t1fs._domain-a)/(b-a), 0), t1fs._precision)
+			t1fs._dom = np.round(
+				np.maximum((t1fs._domain-a)/(b-a), 0), t1fs._precision
+			)
 		else:
-			t1fs._dom = np.round(np.maximum(np.minimum((t1fs._domain-a)/(b-a), (c-t1fs._domain)/(c-b)), 0), t1fs._precision)
+			t1fs._dom = np.round(
+				np.maximum(
+					np.minimum((t1fs._domain-a)/(b-a), (c-t1fs._domain)/(c-b)), 0
+				), t1fs._precision
+			)
 		
 		return t1fs
 

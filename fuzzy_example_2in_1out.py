@@ -74,6 +74,7 @@ output = system.evaluate_output({
 		})
 
 print(output)
+# info = system.evaluate_output_info(self, input_values)
 # print('fuzzification\n-------------\n', info['fuzzification'])
 # print('rules\n-----\n', info['rules'])
 

@@ -53,6 +53,11 @@ class FuzzyVariable():
 		'''
 		return self._sets[name]
 
+	def addTriangular(self, name, low, mid, high):
+		self.add_triangular(name, low, mid, high)
+		
+		return self
+
 	def add_triangular(self, name, low, mid, high):
 		new_set = FuzzySet.create_triangular(name, self._min_val, self._max_val, self._res, low, mid, high)
 		self._add_set(name, new_set)
